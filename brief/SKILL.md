@@ -32,21 +32,30 @@ A brief that fits in a paragraph. The problem, the person, the promise, and the 
 
 ## Action
 
-1. Read `CLAUDE.md` if it exists. Extract any stated project goals, constraints, or prior decisions.
-2. Read any files passed by the user — notes, tickets, transcripts, raw descriptions. If nothing is passed, ask: "What are you building and why?"
-3. Ask the following questions one at a time. Wait for each answer before proceeding:
-   - What specific cultural or businessproblem does this solve, and for whom specifically?
+1. Check for `.dt-foundry/brief.md`:
+   - If it exists: read it, present it to the user, and ask — "There's already a brief on file. Is this still current, or do you want to update it?" If current, stop here. If updating, continue to step 2.
+   - If it doesn't exist: say — "No brief on file. Let's build one." Then continue to step 2.
+
+2. Read `CLAUDE.md` if it exists. Extract any stated project goals, constraints, or prior decisions.
+
+3. Read any files passed by the user — notes, tickets, transcripts, raw descriptions. If nothing is passed, ask: "What are you building and why?"
+
+4. Ask the following questions one at a time. Wait for each answer before proceeding:
+   - What specific cultural or business problem does this solve, and for whom specifically?
    - What is the need before they use this, and what should they feel after?
    - What is the singular, measurable action or shift in perception we want to achieve?
-   - What is the "unspoken truth" or friction point that makes this relevant/solve?
+   - What is the "unspoken truth" or friction point that makes this relevant?
    - What are the functional truths or "proof points" that make our claim credible?
-   - What is the one thing this feature must do to be considered succesful?
+   - What is the one thing this feature must do to be considered successful?
    - What are you explicitly not building, and why is that the right call?
    - Will this work globally or is it just a regional build?
    - What are the non-negotiables (legal, technical, or cultural) that must be integrated without compromising the creative?
-4. Synthesize answers into a single-paragraph brief: problem / person / promise / constraint. Plain language, no jargon.
-5. Write the brief to `.dt-foundry/brief.md` with a timestamp header.
-6. Print the brief to the terminal. State: "This is the brief. Check your decisions against it."
+
+5. Synthesize answers into a single-paragraph brief: problem / person / promise / constraint. Plain language, no jargon.
+
+6. Write the brief to `.dt-foundry/brief.md` with a timestamp header.
+
+7. Print the brief to the terminal. State: "This is the brief. Check your decisions against it."
 
 ---
 
