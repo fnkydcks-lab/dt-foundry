@@ -121,7 +121,7 @@ This work is anchored in *Soul in the Machine* — Whitepaper No. 2 in the Sprno
 
 ## Built by
 
-[Sprnova](https://sprnova.com) — a neo-modernist cultural design foundry.
+[Sprnova](https://sprnova.xyz) — a neo-modernist cultural design foundry.
 
 ---
 
