@@ -70,21 +70,26 @@ Does this do what the brief said it would do? Have you used it as the user, not 
    **Unknown stack** — report what was found and ask the user to supply the lint, test, and build commands before continuing.
  
 4. Check environment variables — confirm no hardcoded secrets, no dev keys in production config.
+
+5. Check weather API readiness:
+   - If `WeatherService._useLiveApi` is `false`: confirm stub mode is intentional and documented. Note it in the preflight report.
+   - If `WeatherService._useLiveApi` is `true`: confirm the API key is set in constants (not hardcoded inline), the key is excluded from version control, and the fallback `_stub()` path is still reachable on error.
+   - Command: `grep -n "_useLiveApi" lib/services/weather_service.dart`
  
-5. Verify consent architecture: confirm data only goes where the brief and DU declared it goes.
+6. Verify consent architecture: confirm data only goes where the brief and DU declared it goes.
  
-6. Ask: "Have you used this as the user, not as the builder? If not, do that before this clears."
+7. Ask: "Have you used this as the user, not as the builder? If not, do that before this clears."
  
-7. Ask: "What's the one thing you're hoping no one notices?" Name it. Decide whether to fix or own it.
+8. Ask: "What's the one thing you're hoping no one notices?" Name it. Decide whether to fix or own it.
  
-8. Verdict:
+9. Verdict:
    - **Green** — ship with confidence
    - **Amber** — ship with a named caveat you've accepted
    - **Red** — do not ship; here's exactly why
  
-9. Write preflight report to `.dt-foundry/preflight.md` with timestamp, detected stack, and verdict.
+10. Write preflight report to `.dt-foundry/preflight.md` with timestamp, detected stack, and verdict.
  
-10. Print verdict to terminal. Red stops here.
+11. Print verdict to terminal. Red stops here.
  
 ---
 
