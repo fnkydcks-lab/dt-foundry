@@ -29,7 +29,7 @@ Does this feel like it was made by someone who cares, or assembled by someone wh
 ## Action
 
 1. Read the UI layer — component files, screen files, or any code that produces a visible output. If a URL is provided, note it for visual reference.
-2. Read `.dt-foundry/brief.md` if it exists. The brief is the standard the taste is measured against.
+2. Read `dt-foundry/brief.md` if it exists. The brief is the standard the taste is measured against.
 3. Evaluate against these criteria in sequence:
    - **Considered vs assembled:** Does each decision have a reason or is it a default?
    - **First three seconds:** What emotion does this produce immediately?
@@ -38,7 +38,7 @@ Does this feel like it was made by someone who cares, or assembled by someone wh
    - **Ambient vs demanding:** Is this asking for attention it hasn't earned?
    - **Brand signal:** What does a first-time user assume about the company that made this?
 4. Identify the one thing that doesn't feel right yet. Name it precisely.
-5. Write output to `.dt-foundry/taste.md` with timestamp.
+5. Write output to `dt-foundry/taste.md` with timestamp.
 6. Print to terminal: what's working, what's not, the one thing to fix first.
 
 ---

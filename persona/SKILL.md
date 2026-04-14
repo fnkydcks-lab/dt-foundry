@@ -28,7 +28,7 @@ Who is this person at the exact moment they need this product? What have they al
 
 ## Action
 
-1. Read `.dt-foundry/brief.md`. The persona must match the person the brief was written for.
+1. Read `dt-foundry/brief.md`. The persona must match the person the brief was written for.
 2. Read any available research — App Store reviews, support threads, user feedback, existing notes. If none exist, proceed with what the builder knows.
 3. Ask the following. Wait for each answer:
    - What is the fundamental tension the user is facing that is making them look for a solution?
@@ -48,7 +48,7 @@ Who is this person at the exact moment they need this product? What have they al
    - What they believe about themselves that this product confirms or challenges
    - The exact sentence they'd use to describe the product to someone they trust
    - The sentence they'd use if it let them down
-5. Write persona to `.dt-foundry/persona.md` with timestamp.
+5. Write persona to `dt-foundry/persona.md` with timestamp.
 6. Print to terminal: the person, fully rendered. One read should make them feel real.
 
 ---

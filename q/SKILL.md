@@ -28,22 +28,22 @@ Is the brief still alive in what's been built? Is the persona still in the room 
 
 ## Action
 
-1. Read all existing `.dt-foundry/` output files — brief, persona, scope, taste, room, preflight, retro, target. Build a complete picture of the project record.
+1. Read all existing `dt-foundry/` output files — brief, persona, scope, taste, room, preflight, retro, target. Build a complete picture of the project record.
 2. Run:
    ```bash
    git log --oneline -20          # recent commit history
    git diff --stat HEAD~10 HEAD   # volume and shape of recent change
    ```
 3. Run each lens diagnostically — not full execution, but a health check pass:
-   - **Brief alive?** Does the current build still match `.dt-foundry/brief.md`?
-   - **Persona in the room?** Is the person from `.dt-foundry/persona.md` still served by what's been built?
-   - **Scope held?** Cross-reference `.dt-foundry/scope.md` against current file list.
-   - **Taste maintained?** Read `.dt-foundry/taste.md` — have the flagged issues been addressed?
-   - **Room right?** Is the platform fit from `.dt-foundry/room.md` still valid?
+   - **Brief alive?** Does the current build still match `dt-foundry/brief.md`?
+   - **Persona in the room?** Is the person from `dt-foundry/persona.md` still served by what's been built?
+   - **Scope held?** Cross-reference `dt-foundry/scope.md` against current file list.
+   - **Taste maintained?** Read `dt-foundry/taste.md` — have the flagged issues been addressed?
+   - **Room right?** Is the platform fit from `dt-foundry/room.md` still valid?
    - **/hoser check:** Is there anything that accumulated that should be cut?
    - **/target status:** Is the last convergence report current or stale?
 4. Ask the one question /q always asks last: "Is this still the thing you meant to make?"
-5. Write full diagnostic to `.dt-foundry/q.md` with timestamp.
+5. Write full diagnostic to `dt-foundry/q.md` with timestamp.
 6. Print to terminal: project health across all lenses, the tensions, the decisions required before the next phase, and the answer to whether this is still the thing you meant to make.
 
 ---

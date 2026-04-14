@@ -21,7 +21,7 @@ Every lens in dt-foundry is structured using the SDL formula:
 **ID + TD + DU = V**
 Intent Declaration + Tool Declaration + Data Unit = Vault
 
-Every run writes to a `.dt-foundry/` directory in your project root. That directory is the Vault — a timestamped provenance record of every design decision that shaped the build. Proof that a person was in the room.
+Every run writes to a `dt-foundry/` directory in your project root. That directory is the Vault — a timestamped provenance record of every design decision that shaped the build. Proof that a person was in the room.
 
 ---
 
@@ -105,7 +105,7 @@ Run any lens as a slash command in Claude Code:
 /q              — before anything that can't be undone
 ```
 
-Every run appends to `.dt-foundry/` in your project root. The directory accumulates. By the time you run `/q`, it has a full record to read.
+Every run appends to `dt-foundry/` in your project root. The directory accumulates. By the time you run `/q`, it has a full record to read.
 
 ---
 
@@ -113,7 +113,7 @@ Every run appends to `.dt-foundry/` in your project root. The directory accumula
 
 dt-foundry is the first implementation of the Sprnova Declaration Layer (SDL). The SKILL.md file format is itself an intent declaration — the YAML frontmatter is the Tool Declaration, the markdown body is the Intent Declaration. The two halves of every lens file are ID + TD in the same document, separated by nothing but `---`.
 
-The `.dt-foundry/` directory is the Vault. The consent transaction happens where intent meets data. The philosophy runs in the files.
+The `dt-foundry/` directory is the Vault. The consent transaction happens where intent meets data. The philosophy runs in the files.
 
 This work is anchored in *Soul in the Machine* — Whitepaper No. 2 in the Sprnova series on consent-native design. Published Q2 2026.
 

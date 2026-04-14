@@ -37,7 +37,7 @@ Did you overcomplicate this? Can you delete a database migration? Does this need
 
 ### Mode 1 — Single lens: `/hoser /[lens]`
 
-1. Read the named lens output from `.dt-foundry/[lens].md`.
+1. Read the named lens output from `dt-foundry/[lens].md`.
 2. Apply the restraint filter to every element:
    - Can this be deleted without losing meaning?
    - Is this complexity load-bearing or decorative?
@@ -46,26 +46,26 @@ Did you overcomplicate this? Can you delete a database migration? Does this need
    - Does this need a dependency, or can it be done natively?
    - Does this need an LLM call, or will a regex do?
 3. Identify what got simpler. Name it precisely — not "simplify the UI" but "remove the confirmation modal, the action is reversible."
-4. Append restraint note to `.dt-foundry/[lens].md` under a `## /hoser` heading with timestamp.
+4. Append restraint note to `dt-foundry/[lens].md` under a `## /hoser` heading with timestamp.
 5. Print to terminal: the one thing that got simpler.
 
 ### Mode 2 — Hoser Prime: `/hoser`
 
-1. Read all existing `.dt-foundry/` output files.
+1. Read all existing `dt-foundry/` output files.
 2. Apply the restraint filter across the full practice — not feature by feature but pattern by pattern. Look for:
    - Complexity that accumulated across multiple lenses
    - Decisions that made sense in isolation but bloat the whole
    - The feature or decision that keeps showing up that shouldn't be there
    - The one thing that, if removed, makes everything else cleaner
 3. Produce a Hoser Prime report — what the whole practice would look like if someone with good taste and no budget built it.
-4. Write to `.dt-foundry/hoser.md` with timestamp.
+4. Write to `dt-foundry/hoser.md` with timestamp.
 5. Print to terminal: the pattern, the cut, the version that's better.
 
 ---
 
 ## Data Unit — DU
 
-**Input:** One named lens output (Mode 1) or all `.dt-foundry/` outputs (Mode 2). You declare the target. /hoser does not infer.
+**Input:** One named lens output (Mode 1) or all `dt-foundry/` outputs (Mode 2). You declare the target. /hoser does not infer.
 
 **Permissions:** Read only. /hoser observes and names. It does not modify lens outputs except to append its own note.
 
@@ -75,6 +75,6 @@ Did you overcomplicate this? Can you delete a database migration? Does this need
 
 ## Vault — V
 
-**What it hands you back:** Mode 1 — a restraint note appended to the named lens output. Mode 2 — a Hoser Prime report in `.dt-foundry/hoser.md`. Either way: the thing that got simpler because /hoser was in the room.
+**What it hands you back:** Mode 1 — a restraint note appended to the named lens output. Mode 2 — a Hoser Prime report in `dt-foundry/hoser.md`. Either way: the thing that got simpler because /hoser was in the room.
 
 **What gets stored:** The record of what was removed and why. Sometimes the most important design decision in a build is what didn't ship. /hoser keeps that record.

@@ -63,7 +63,7 @@ allowed-tools: [Read, Write, Bash — declare what this lens can touch]
 - The **Who this is** section reads like a person, not a feature list
 - The **What it won't do** section is honest about the edges
 - The **Action** section actually executes — not describes
-- It writes to `.dt-foundry/[lens].md` so it compounds with the rest of the pack
+- It writes to `dt-foundry/[lens].md` so it compounds with the rest of the pack
 
 ---
 

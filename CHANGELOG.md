@@ -25,7 +25,7 @@ Initial release.
 ### Architecture
 
 - SDL formula: ID + TD + DU = V
-- `.dt-foundry/` directory as Vault — timestamped provenance record per project
+- `dt-foundry/` directory as Vault — timestamped provenance record per project
 - Stack-agnostic preflight detection: Flutter, Node, Rust, Python, Go, Swift
 - gstack dependency for `/dev` and `/target` engineering passes
 

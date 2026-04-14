@@ -37,9 +37,9 @@ What shipped since the last session? What is in progress right now? What is bloc
    git diff --stat HEAD~5 HEAD                 # shape of recent change
    ```
 
-2. Read `.dt-foundry/brief.md` — one line reminder of what this build is for.
+2. Read `dt-foundry/brief.md` — one line reminder of what this build is for.
 
-3. Read the most recent `.dt-foundry/` output file to pick up where the last session left off.
+3. Read the most recent `dt-foundry/` output file to pick up where the last session left off.
 
 4. Ask the following. Wait for each answer:
    - What shipped or moved since the last session?
@@ -49,7 +49,7 @@ What shipped since the last session? What is in progress right now? What is bloc
 
 5. Identify the next action. One thing. Named precisely.
 
-6. Write standup note to `.dt-foundry/standup.md` — append with timestamp (date + time, e.g. `## 2026-04-13 19:04 — Session close`), don't overwrite. Every standup is a new entry. The file accumulates.
+6. Write standup note to `dt-foundry/standup.md` — append with timestamp (date + time, e.g. `## 2026-04-13 19:04 — Session close`), don't overwrite. Every standup is a new entry. The file accumulates.
 
 7. Print to terminal: what moved, what's blocked, the one next action.
 
@@ -70,4 +70,4 @@ What shipped since the last session? What is in progress right now? What is bloc
 
 **What it hands you back:** A standup note. What moved, what's blocked, the next action. Short enough to read in thirty seconds.
 
-**What gets stored:** The running session log. `.dt-foundry/standup.md` accumulates every standup as a timestamped entry (date + time) — a day-by-day record of how the build actually progressed. The honest journal of the work.
+**What gets stored:** The running session log. `dt-foundry/standup.md` accumulates every standup as a timestamped entry (date + time) — a day-by-day record of how the build actually progressed. The honest journal of the work.

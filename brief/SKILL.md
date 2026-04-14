@@ -32,7 +32,7 @@ A brief that fits in a paragraph. The problem, the person, the promise, and the 
 
 ## Action
 
-1. Check for `.dt-foundry/brief.md`:
+1. Check for `dt-foundry/brief.md`:
    - If it exists: read it, present it to the user, and ask — "There's already a brief on file. Is this still current, or do you want to update it?" If current, stop here. If updating, continue to step 2.
    - If it doesn't exist: say — "No brief on file. Let's build one." Then continue to step 2.
 
@@ -53,7 +53,7 @@ A brief that fits in a paragraph. The problem, the person, the promise, and the 
 
 5. Synthesize answers into a single-paragraph brief: problem / person / promise / constraint. Plain language, no jargon.
 
-6. Write the brief to `.dt-foundry/brief.md` with a timestamp header.
+6. Write the brief to `dt-foundry/brief.md` with a timestamp header.
 
 7. Print the brief to the terminal. State: "This is the brief. Check your decisions against it."
 

@@ -28,7 +28,7 @@ Does this do what the brief said it would do? Have you used it as the user, not 
  
 ## Action
  
-1. Read `.dt-foundry/brief.md`. Confirm the build does what the brief said it would do.
+1. Read `dt-foundry/brief.md`. Confirm the build does what the brief said it would do.
  
 2. Detect the project stack:
    ```bash
@@ -71,7 +71,7 @@ Does this do what the brief said it would do? Have you used it as the user, not 
  
 4. Check environment variables — confirm no hardcoded secrets, no dev keys in production config.
 
-5. Check for a project-level checklist at `.dt-foundry/preflight_checklist.md`. If it exists, run every item on it before continuing. These are project-specific checks that live in the project, not in this skill.
+5. Check for a project-level checklist at `dt-foundry/preflight_checklist.md`. If it exists, run every item on it before continuing. These are project-specific checks that live in the project, not in this skill.
  
 6. Verify consent architecture: confirm data only goes where the brief and DU declared it goes.
  
@@ -84,7 +84,7 @@ Does this do what the brief said it would do? Have you used it as the user, not 
    - **Amber** — ship with a named caveat you've accepted
    - **Red** — do not ship; here's exactly why
  
-10. Write preflight report to `.dt-foundry/preflight.md` with timestamp, detected stack, and verdict.
+10. Write preflight report to `dt-foundry/preflight.md` with timestamp, detected stack, and verdict.
  
 11. Print verdict to terminal. Red stops here.
  

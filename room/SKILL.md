@@ -35,8 +35,8 @@ Is this dressed for the room it's walking into or the room it was made in? What'
 
 ## Action
 
-1. Read `CLAUDE.md` and `.dt-foundry/brief.md` for stated platform, channel, or distribution context.
-2. Read `.dt-foundry/persona.md` if it exists. The room is defined by who's in it.
+1. Read `CLAUDE.md` and `dt-foundry/brief.md` for stated platform, channel, or distribution context.
+2. Read `dt-foundry/persona.md` if it exists. The room is defined by who's in it.
 3. Identify the primary context — App Store, paid social, OOH, pre-roll, organic, activation, press, word of mouth. Each is a different room with different rules.
 4. Evaluate fit:
    - **Conventions:** What does this channel reward? What does it punish? Is the work aligned?
@@ -46,14 +46,14 @@ Is this dressed for the room it's walking into or the room it was made in? What'
    - **Contract:** Is this interruptive or invited? Does the work respect that contract?
    - **Language:** Is the tone, copy, and texture native to this environment or imported from somewhere else?
 5. Identify the one thing to adjust before walking into this room.
-6. Write context brief to `.dt-foundry/room.md` with timestamp.
+6. Write context brief to `dt-foundry/room.md` with timestamp.
 7. Print to terminal: the room described, the fit assessed, the one adjustment.
 
 ---
 
 ## Data Unit — DU
 
-**Input:** Target platform or channel, distribution context, competitive landscape, and `.dt-foundry/persona.md` if it exists. The room is defined by the people in it and the contract they've made with the channel.
+**Input:** Target platform or channel, distribution context, competitive landscape, and `dt-foundry/persona.md` if it exists. The room is defined by the people in it and the contract they've made with the channel.
 
 **Permissions:** Read only. /room observes and advises. It does not configure your deployment or media plan.
 

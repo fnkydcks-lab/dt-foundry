@@ -38,7 +38,7 @@ After something substantial is complete. After a major feature, after a sprint, 
 
 ## Action
 
-1. Read `.dt-foundry/brief.md`, `.dt-foundry/scope.md`, `.dt-foundry/persona.md` if they exist.
+1. Read `dt-foundry/brief.md`, `dt-foundry/scope.md`, `dt-foundry/persona.md` if they exist.
 2. Run the four framework passes in sequence:
 
    **Pass 1 — Garry lens (gstack engineering review):**
@@ -64,7 +64,7 @@ After something substantial is complete. After a major feature, after a sprint, 
    - **Reverses into:** What does this become when pushed to its extreme?
 
    **Pass 4 — dt-foundry lens:**
-   Read `.dt-foundry/taste.md` and `.dt-foundry/scope.md`. Evaluate: does the build match the brief, pass taste, respect scope, serve the persona?
+   Read `dt-foundry/taste.md` and `dt-foundry/scope.md`. Evaluate: does the build match the brief, pass taste, respect scope, serve the persona?
 
    **Pass 5 — Ogilvy lens (sells with intelligence):**
    Evaluate the copy, messaging, and communication layer:
@@ -87,7 +87,7 @@ After something substantial is complete. After a major feature, after a sprint, 
    - Where all six lenses agree → confidence, name it
    - Where lenses conflict → the exact decision that needs to be made
    - What only the SDL formula resolves → name it explicitly
-4. Write convergence report to `.dt-foundry/target.md` with timestamp.
+4. Write convergence report to `dt-foundry/target.md` with timestamp.
 5. Print to terminal: agreements, conflicts, the decisions required, summary verdict — ship / hold / fix-and-ship with named conditions.
 
 ---

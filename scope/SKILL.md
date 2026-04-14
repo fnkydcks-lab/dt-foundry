@@ -28,7 +28,7 @@ Is this in the brief or did we add it? What does this feature cost in complexity
 
 ## Action
 
-1. Read `.dt-foundry/brief.md`. This is the baseline. Everything gets measured against it.
+1. Read `dt-foundry/brief.md`. This is the baseline. Everything gets measured against it.
 2. Read `CLAUDE.md` for any stated constraints or scope decisions.
 3. List every feature, file, or task currently in progress or on the active list.
 4. For each item, classify:
@@ -37,7 +37,7 @@ Is this in the brief or did we add it? What does this feature cost in complexity
    - **Out** — clearly beyond the brief; defer or cut
 5. Flag any "we should also..." additions that arrived without a brief of their own.
 6. Identify the one thing the product needs to do before it needs to do anything else.
-7. Write scope health report to `.dt-foundry/scope.md` with timestamp.
+7. Write scope health report to `dt-foundry/scope.md` with timestamp.
 8. Print to terminal: in / drifted / out counts, the drift decisions needed, the one priority.
 
 ---

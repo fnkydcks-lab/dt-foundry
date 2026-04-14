@@ -25,7 +25,7 @@ When the user's request matches a lens, invoke it. Do not answer directly.
 
 ## The Vault
 
-Every lens writes to `.dt-foundry/` in the project root. Do not delete this directory. It is the provenance record — the timestamped history of every design decision that shaped the build. Proof that a person was in the room.
+Every lens writes to `dt-foundry/` in the project root. Do not delete this directory. It is the provenance record — the timestamped history of every design decision that shaped the build. Proof that a person was in the room.
 
 ## Available lenses
 
@@ -58,6 +58,6 @@ Install: `git clone --single-branch --depth 1 https://github.com/garrytan/gstack
 SDL = ID + TD + DU = V
 Intent Declaration + Tool Declaration + Data Unit = Vault
 
-The SKILL.md file format is itself the formula in practice. The YAML frontmatter is the Tool Declaration. The markdown body is the Intent Declaration. The `.dt-foundry/` directory is the Vault.
+The SKILL.md file format is itself the formula in practice. The YAML frontmatter is the Tool Declaration. The markdown body is the Intent Declaration. The `dt-foundry/` directory is the Vault.
 
 Engineering-first tools produce engineering-first products. If you want to build something human-first, you need a practice that starts with the human.
