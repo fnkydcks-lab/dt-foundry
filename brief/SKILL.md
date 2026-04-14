@@ -34,7 +34,9 @@ A brief that fits in a paragraph. The problem, the person, the promise, and the 
 
 1. Check for `dt-foundry/brief.md`:
    - If it exists: read it, present it to the user, and ask — "There's already a brief on file. Is this still current, or do you want to update it?" If current, stop here. If updating, continue to step 2.
-   - If it doesn't exist: say — "No brief on file. Let's build one." Then continue to step 2.
+   - If it doesn't exist: ask — "Is there a brief that already exists, or are we building it together?" Wait for the answer before proceeding.
+     - If the user has a brief: ask them to share it (file, paste, or description). Read it, then skip to step 4.
+     - If building from scratch: say — "No brief on file. Let's build one." Then continue to step 2.
 
 2. Read `CLAUDE.md` if it exists. Extract any stated project goals, constraints, or prior decisions.
 
