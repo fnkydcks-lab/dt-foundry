@@ -1,7 +1,7 @@
 ---
 name: /dev
 description: Engineering review lens. Evaluates code quality, architecture, production-readiness, security, and performance. The engineering counterpart to /taste.
-allowed-tools: Read, Bash
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is

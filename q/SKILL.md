@@ -1,7 +1,7 @@
 ---
 name: /q
 description: Full diagnostic. Runs all lenses in one pass and returns a complete picture of where the project stands. God mode.
-allowed-tools: Read, Bash
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is

@@ -25,7 +25,7 @@ When the user's request matches a lens, invoke it. Do not answer directly.
 
 ## The Vault
 
-Every lens writes to `dt-foundry/` in the project root. Do not delete this directory. It is the provenance record — the timestamped history of every design decision that shaped the build. Proof that a person was in the room.
+Every lens writes to `dt-foundry/` in the **current project root** — not the skills directory. Before writing any output, run `mkdir -p dt-foundry` from the project root to ensure the directory exists. Do not delete this directory. It is the provenance record — the timestamped history of every design decision that shaped the build. Proof that a person was in the room.
 
 ## Available lenses
 

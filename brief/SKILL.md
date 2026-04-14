@@ -1,7 +1,7 @@
 ---
 name: /brief
 description: Captures and crystallizes project intent before a single line of code is written. Run this at the start of any feature, sprint, or product decision.
-allowed-tools: Read, Write
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is

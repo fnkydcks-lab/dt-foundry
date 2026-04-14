@@ -1,7 +1,7 @@
 ---
 name: /preflight
 description: Pre-deploy checklist with a design conscience. Runs before anything ships to confirm the build is ready — technically and intentionally.
-allowed-tools: Read, Bash
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is

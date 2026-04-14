@@ -1,7 +1,7 @@
 ---
 name: /scope
 description: Holds the line on what this is and isn't. Runs when the feature list starts moving or the build starts drifting from the brief.
-allowed-tools: Read
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is

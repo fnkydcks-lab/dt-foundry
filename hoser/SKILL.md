@@ -1,7 +1,7 @@
 ---
 name: /hoser
 description: Restraint pass. Three modes — point it at one lens, run it across all lenses, or invoke Hoser Prime for the full practice audit. The opposite of /q on the scope axis.
-allowed-tools: Read
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is

@@ -1,7 +1,7 @@
 ---
 name: /standup
 description: Daily status check. Where are we today, what moved, what's blocked, what's next. Run at the start of a session before you build.
-allowed-tools: Read, Bash
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is

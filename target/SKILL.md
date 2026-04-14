@@ -1,7 +1,7 @@
 ---
 name: /target
 description: Runs six real frameworks against the same work and produces a convergence report. The flagship lens — where engineering rigour meets design intent meets media theory meets creative conscience.
-allowed-tools: Read, Bash
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is

@@ -1,7 +1,7 @@
 ---
 name: /taste
 description: Evaluates the aesthetic and experiential quality of what was just built. Not whether it works — whether it's good.
-allowed-tools: Read
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is
@@ -30,16 +30,18 @@ Does this feel like it was made by someone who cares, or assembled by someone wh
 
 1. Read the UI layer — component files, screen files, or any code that produces a visible output. If a URL is provided, note it for visual reference.
 2. Read `dt-foundry/brief.md` if it exists. The brief is the standard the taste is measured against.
-3. Evaluate against these criteria in sequence:
+3. Read `dt-foundry/preflight.md` if it exists. Any items flagged there as pending, deferred, or not-yet-integrated are **known context** — do not call them out as design issues. Note them as "pending per preflight" if they come up.
+4. Evaluate against these criteria in sequence:
    - **Considered vs assembled:** Does each decision have a reason or is it a default?
    - **First three seconds:** What emotion does this produce immediately?
    - **Rams test:** What would Dieter Rams cut?
    - **Copy:** Does every word earn its place?
    - **Ambient vs demanding:** Is this asking for attention it hasn't earned?
    - **Brand signal:** What does a first-time user assume about the company that made this?
-4. Identify the one thing that doesn't feel right yet. Name it precisely.
-5. Write output to `dt-foundry/taste.md` with timestamp.
-6. Print to terminal: what's working, what's not, the one thing to fix first.
+5. Identify the one thing that doesn't feel right yet. Name it precisely. Do not name anything already flagged in preflight.
+6. Run `mkdir -p dt-foundry` to ensure the output directory exists in the project root.
+7. Write output to `dt-foundry/taste.md` with timestamp.
+8. Print to terminal: what's working, what's not, the one thing to fix first.
 
 ---
 
