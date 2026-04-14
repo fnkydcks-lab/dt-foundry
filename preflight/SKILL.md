@@ -71,10 +71,7 @@ Does this do what the brief said it would do? Have you used it as the user, not 
  
 4. Check environment variables — confirm no hardcoded secrets, no dev keys in production config.
 
-5. Check weather API readiness:
-   - If `WeatherService._useLiveApi` is `false`: confirm stub mode is intentional and documented. Note it in the preflight report.
-   - If `WeatherService._useLiveApi` is `true`: confirm the API key is set in constants (not hardcoded inline), the key is excluded from version control, and the fallback `_stub()` path is still reachable on error.
-   - Command: `grep -n "_useLiveApi" lib/services/weather_service.dart`
+5. Check for a project-level checklist at `.dt-foundry/preflight_checklist.md`. If it exists, run every item on it before continuing. These are project-specific checks that live in the project, not in this skill.
  
 6. Verify consent architecture: confirm data only goes where the brief and DU declared it goes.
  
