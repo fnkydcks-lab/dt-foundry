@@ -4,7 +4,7 @@ a design practice in a terminal.
 
 ## What this is
 
-dt-foundry is a Claude Code lens pack for design technologists. It injects user intent, creative conscience, and consent-native thinking into your project's workflow. Twelve lenses that ask the questions a full design or advertising agency would ask.
+dt-foundry is a Claude Code lens pack for design technologists. It injects user intent, creative conscience, and consent-native thinking into your project's workflow. Eleven lenses that ask the questions a full design or advertising agency would ask.
 
 ## Skill routing
 
