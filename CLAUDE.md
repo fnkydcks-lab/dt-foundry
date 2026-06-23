@@ -22,6 +22,9 @@ When the user's request matches a lens, invoke it. Do not answer directly.
 - Full project diagnostic, is this still the thing you meant to make — invoke `/q`
 - Restraint pass on a single lens — invoke `/hoser /[lens]`
 - Restraint pass across the full practice — invoke `/hoser`
+- "What happened?", "why are we still finding things?", comprehension of a fix cycle — invoke `/logicchain`
+- Flutter codebase check, platform distribution readiness — invoke `/sFlutterCheck`
+- Visual design QA, spacing, hierarchy, AI slop patterns — invoke `/design-review`
 
 ## The Vault
 
@@ -29,7 +32,7 @@ Every lens writes to `dt-foundry/` in the **current project root** — not the s
 
 ## Available lenses
 
-/brief, /taste, /scope, /standup, /persona, /room, /preflight, /dev, /target, /q, /hoser
+/brief, /taste, /scope, /standup, /persona, /room, /preflight, /dev, /target, /q, /hoser, /logicchain, /sFlutterCheck, /design-review
 
 ## /target — six passes
 
@@ -50,7 +53,10 @@ The flagship lens. Six frameworks against the same work, one convergence report:
 
 ## Dependencies
 
-gstack must be installed for `/dev` and `/target` to run engineering passes.
+Skills do not run with missing parts. If a dependency is not present, halt immediately and tell the user exactly what is missing and how to install it. Do not run a partial version of the skill. A partial run produces false confidence — worse than no run.
+
+**gstack** — required by `/dev` and `/target` for engineering passes.
+Check: `ls ~/.claude/skills/gstack`
 Install: `git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup`
 
 ## Philosophy

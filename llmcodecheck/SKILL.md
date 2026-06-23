@@ -57,7 +57,15 @@ The relevant categories for a mobile + Supabase stack are: LLM02, LLM05, LLM06, 
 
 1. Read `.dt-foundry/brief.md` for schema and feature context.
 
-2. Run the six relevant OWASP checks:
+2. Read `.dt-foundry/mode.md` — use the current mode to set severity framing:
+   - **Design / Code:** Fix Now / Fix Before QA / Fix Before Ship / Monitor
+   - **QA:** Fix Now (blocks submission) / Fix Next Build / Monitor
+   - **Ship:** Fix Now (blocks submission) / Monitor
+   Collapse the tiers accordingly. A "fix before launch" finding in Code mode becomes "fix next build" in QA mode and "monitor" in Ship mode — unless it is a genuine blocker.
+
+3. Read `.dt-foundry/llmcodecheck.md` if it exists — carry forward any findings marked **KNOWN / ACCEPTED** or **MONITOR** without re-litigating them. Only re-open a closed finding if the code changed in that area since the last report.
+
+4. Run the six relevant OWASP checks:
 
    **LLM06 — Secrets in source:**
    ```bash
@@ -96,15 +104,15 @@ The relevant categories for a mobile + Supabase stack are: LLM02, LLM05, LLM06, 
    ```
    Flag any CDN import without a pinned version tag (e.g. `@supabase/supabase-js` without `@2.x.x`).
 
-3. For each finding:
+5. For each finding:
    - Name the OWASP category
    - Quote the exact line
    - State the risk in plain language (not jargon)
-   - State the fix
+   - State the fix, sized to the current mode
 
-4. Write report to `.dt-foundry/llmcodecheck.md` with timestamp.
+6. Write report to `.dt-foundry/llmcodecheck.md` with timestamp.
 
-5. Print to terminal: findings by severity — **fix before ship**, **fix before public launch**, **monitor**.
+7. Print to terminal: findings by severity — tiers adjusted for current mode.
 
 ---
 

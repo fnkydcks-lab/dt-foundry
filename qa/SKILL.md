@@ -81,19 +81,21 @@ After all eight lenses read the bug:
 
 ### Mode 1 — Log a bug: `/qa log`
 
-1. Capture the four facts: Severity, Platform, Reproducibility, Status.
-2. Write steps to reproduce — precise enough that someone who didn't find the bug can find it again.
-3. Run all eight lenses. One sentence each.
-4. Identify convergence or split. Name the effective severity after lenses.
-5. Append to `.dt-foundry/qa.md` under the current session block.
+1. Read `.dt-foundry/qa.md` if it exists — check whether this bug is already logged. If found, update the existing entry rather than creating a duplicate.
+2. Capture the four facts: Severity, Platform, Reproducibility, Status.
+3. Write steps to reproduce — precise enough that someone who didn't find the bug can find it again.
+4. Run all eight lenses. One sentence each.
+5. Identify convergence or split. Name the effective severity after lenses.
+6. Append to `.dt-foundry/qa.md` under the current session block.
 
 ### Mode 2 — Session review: `/qa`
 
 1. Read `.dt-foundry/qa.md` — open bugs only.
 2. For each open bug: are the facts still accurate? Has anything changed since it was filed?
 3. Identify the one bug that, if fixed today, moves the build forward most.
-4. Print to terminal: open bug count by severity, the one priority fix, any Founder-override items.
-5. Append session note to `.dt-foundry/qa.md` with timestamp.
+4. If a bug's root cause is unclear from the log — invoke `/investigate` to go deeper before filing it as unresolvable. /investigate is the depth tool; /qa is the log.
+5. Print to terminal: open bug count by severity, the one priority fix, any Founder-override items.
+6. Append session note to `.dt-foundry/qa.md` with timestamp.
 
 ### Mode 3 — Verify a fix: `/qa verify [bug-id]`
 

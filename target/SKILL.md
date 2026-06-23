@@ -83,12 +83,14 @@ After something substantial is complete. After a major feature, after a sprint, 
    - Is this culture or is it noise?
    - If there is no user-facing creative layer, note that and skip this pass.
 
-3. Produce convergence report:
+3. Read `dt-foundry/target.md` if it exists — note the prior verdict (ship / hold / fix-and-ship) and any named conditions. Report trajectory: is this build in a better, worse, or equal position to the last run? Carry forward any unresolved conflicts without re-litigating them unless the code changed in that area.
+
+4. Produce convergence report:
    - Where all six lenses agree → confidence, name it
    - Where lenses conflict → the exact decision that needs to be made
    - What only the SDL formula resolves → name it explicitly
-4. Write convergence report to `dt-foundry/target.md` with timestamp.
-5. Print to terminal: agreements, conflicts, the decisions required, summary verdict — ship / hold / fix-and-ship with named conditions.
+5. Write convergence report to `dt-foundry/target.md` with timestamp.
+6. Print to terminal: agreements, conflicts, the decisions required, summary verdict — ship / hold / fix-and-ship with named conditions.
 
 ---
 
