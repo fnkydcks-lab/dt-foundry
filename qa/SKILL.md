@@ -18,6 +18,12 @@ Whether the thing works the way the brief said it would work — on a real devic
 
 ---
 
+## Source of truth
+
+`standup.md` is the prime source, not `qa.md`. Read it in full before taking any QA action — not the tail, not a keyword search, all of it. `qa.md`'s "Fix applied" notes capture intent at the time they were written; they can silently go stale if a fix was later reverted, redone differently, or partially reapplied. `standup.md`'s session-by-session account is the first-hand record of what actually happened — including false starts, reverts, and what was and wasn't kept. When the two disagree, `standup.md` wins.
+
+---
+
 ## The facts layer — ISTQB anchor
 
 Every bug gets four facts before any lens touches it:
@@ -90,7 +96,7 @@ After all eight lenses read the bug:
 
 ### Mode 2 — Session review: `/qa`
 
-1. Read `.dt-foundry/qa.md` — open bugs only.
+1. Read `.dt-foundry/standup.md` in full first, then `.dt-foundry/qa.md` — open bugs only.
 2. For each open bug: are the facts still accurate? Has anything changed since it was filed?
 3. Identify the one bug that, if fixed today, moves the build forward most.
 4. If a bug's root cause is unclear from the log — invoke `/investigate` to go deeper before filing it as unresolvable. /investigate is the depth tool; /qa is the log.
