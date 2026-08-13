@@ -81,9 +81,17 @@ git clone https://github.com/fnkydcks-lab/dt-foundry.git ~/.claude/skills/dt-fou
 ls ~/.claude/skills/dt-foundry/
 ```
 
-Should show: brief, dev, hoser, persona, preflight, q, room, scope, standup, target, taste
+Every directory with a `SKILL.md` is an available lens — the full, current list is always the `Available lenses` line in `CLAUDE.md`, not any name list in this README.
 
-**Step 4 — Start**
+**Step 4 — If you're contributing**
+
+```bash
+cd ~/.claude/skills/dt-foundry && git config core.hooksPath hooks
+```
+
+Blocks committing a new lens without also documenting it in `CLAUDE.md`. See `CONTRIBUTING.md`.
+
+**Step 5 — Start**
 
 Open a Claude Code session in your project and run `/brief`.
 

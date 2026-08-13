@@ -52,8 +52,10 @@ allowed-tools: [Read, Write, Bash — declare what this lens can touch]
 1. Fork the repo
 2. Create a directory with your lens name: `mkdir /your-lens`
 3. Add your `SKILL.md` following the format above
-4. Open a PR with a one-paragraph description of what expertise the lens encodes and who it's for
-5. The PR description is itself a brief — treat it that way
+4. Add your lens to `CLAUDE.md`'s `Available lenses` line and `Skill routing` list — a lens that exists but isn't documented doesn't really exist
+5. Run `./scripts/check-lens-sync.sh` to confirm — it's also wired as a pre-commit hook (`git config core.hooksPath hooks`, one-time per clone), so an undocumented lens won't commit
+6. Open a PR with a one-paragraph description of what expertise the lens encodes and who it's for
+7. The PR description is itself a brief — treat it that way
 
 ---
 

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Blocks commits that add a lens directory without documenting it in CLAUDE.md.
+# Enable once per clone with: git config core.hooksPath hooks
+
+cd "$(git rev-parse --show-toplevel)"
+./scripts/check-lens-sync.sh

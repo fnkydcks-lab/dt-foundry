@@ -4,7 +4,7 @@ a design practice in a terminal.
 
 ## What this is
 
-dt-foundry is a Claude Code lens pack for design technologists. It injects user intent, creative conscience, and consent-native thinking into your project's workflow. Seventeen lenses that ask the questions a full design or advertising agency would ask.
+dt-foundry is a Claude Code lens pack for design technologists. It injects user intent, creative conscience, and consent-native thinking into your project's workflow. Twenty-one lenses that ask the questions a full design or advertising agency would ask.
 
 ## Skill routing
 
@@ -28,6 +28,10 @@ When the user's request matches a lens, invoke it. Do not answer directly.
 - Something worth doing but not now, "add it to the list" — invoke `/backlog`
 - Product is live, what's actually happening in the field — invoke `/wild`
 - Checking if the live product still matches brief/persona/scope — invoke `/drift`
+- Bug found, is it a backlog item or a ship decision — invoke `/qa`
+- App feels slow, jank, loading-spinner complaints — invoke `/trim`
+- Suspect dead code, unused models/methods/flags — invoke `/zombie`
+- AI-generated code just landed, check for LLM failure patterns — invoke `/llmcodecheck`
 
 ## The Vault
 
@@ -35,7 +39,7 @@ Every lens writes to `dt-foundry/` in the **current project root** — not the s
 
 ## Available lenses
 
-/brief, /taste, /scope, /standup, /persona, /room, /preflight, /dev, /target, /q, /hoser, /logicchain, /sFlutterCheck, /design-review, /backlog, /wild, /drift
+/brief, /taste, /scope, /standup, /persona, /room, /preflight, /dev, /target, /q, /hoser, /logicchain, /sFlutterCheck, /design-review, /backlog, /wild, /drift, /qa, /trim, /zombie, /llmcodecheck
 
 ## /wild and /drift — the in-market pair
 
