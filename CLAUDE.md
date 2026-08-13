@@ -4,7 +4,7 @@ a design practice in a terminal.
 
 ## What this is
 
-dt-foundry is a Claude Code lens pack for design technologists. It injects user intent, creative conscience, and consent-native thinking into your project's workflow. Twelve lenses that ask the questions a full design or advertising agency would ask.
+dt-foundry is a Claude Code lens pack for design technologists. It injects user intent, creative conscience, and consent-native thinking into your project's workflow. Fourteen lenses that ask the questions a full design or advertising agency would ask.
 
 ## Skill routing
 
@@ -22,6 +22,9 @@ When the user's request matches a lens, invoke it. Do not answer directly.
 - Full project diagnostic, is this still the thing you meant to make — invoke `/q`
 - Restraint pass on a single lens — invoke `/hoser /[lens]`
 - Restraint pass across the full practice — invoke `/hoser`
+- Something worth doing but not now, "add it to the list" — invoke `/backlog`
+- Product is live, what's actually happening in the field — invoke `/wild`
+- Checking if the live product still matches brief/persona/scope — invoke `/drift`
 
 ## The Vault
 
@@ -29,7 +32,15 @@ Every lens writes to `dt-foundry/` in the project root. Do not delete this direc
 
 ## Available lenses
 
-/brief, /taste, /scope, /standup, /persona, /room, /preflight, /dev, /target, /q, /hoser
+/brief, /taste, /scope, /standup, /persona, /room, /preflight, /dev, /target, /q, /hoser, /backlog, /wild, /drift
+
+## /wild and /drift — the in-market pair
+
+/preflight is the readiness gate before ship. Nothing checked whether a live product was still true — until now. `/wild` looks at the field first (real usage, real feedback, no interpretation). `/drift` runs right after it, comparing what `/wild` found against `/brief`, `/persona`, and `/scope` to name the gap. Drift isn't automatically bad — sometimes it's the market teaching you something the brief didn't know. `/drift` names it; it doesn't correct it for you.
+
+## /backlog — the one lens that's a place, not a report
+
+Every other lens is a diagnostic pass. `/backlog` is the exception — a living list you add to and prune, not a snapshot you read once. It's where "not now" goes so it doesn't quietly become "never," without pretending every deferred item is a decided priority.
 
 ## /target — six passes
 

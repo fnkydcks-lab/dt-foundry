@@ -40,6 +40,9 @@ Every run writes to a `dt-foundry/` directory in your project root. That directo
 | `/target` | Flagship convergence lens. Six passes: Garry, Jack, McLuhan, dt-foundry, Ogilvy, Droga |
 | `/q` | God mode. Full diagnostic. Asks: is this still the thing you meant to make? |
 | `/hoser` | Restraint modifier. `/hoser /[lens]` for one lens. `/hoser` for the full practice |
+| `/backlog` | The living deferred-items list. A place you edit, not a report you read |
+| `/wild` | What's actually happening now that this is live. Ground truth, no interpretation |
+| `/drift` | The gap between `/brief`/`/persona`/`/scope` and what `/wild` found. Runs after `/wild` |
 
 ---
 
@@ -103,6 +106,9 @@ Run any lens as a slash command in Claude Code:
 /hoser /taste   — restraint pass on a single lens
 /hoser          — restraint pass across the full practice
 /q              — before anything that can't be undone
+/backlog        — anytime something's real but not now
+/wild           — once it's live, on a cadence
+/drift          — right after /wild, to name the gap
 ```
 
 Every run appends to `dt-foundry/` in your project root. The directory accumulates. By the time you run `/q`, it has a full record to read.
