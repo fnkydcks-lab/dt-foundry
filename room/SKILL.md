@@ -1,7 +1,7 @@
 ---
 name: /room
 description: Reads the context the work will live in. The platform, the channel, the moment, the surrounding noise. Ensures the work is dressed for the room it's walking into.
-allowed-tools: Read
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is

@@ -1,7 +1,7 @@
 ---
 name: /standup
 description: Daily status check. Where are we today, what moved, what's blocked, what's next. Run at the start of a session before you build.
-allowed-tools: Read, Bash
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is
@@ -37,21 +37,31 @@ What shipped since the last session? What is in progress right now? What is bloc
    git diff --stat HEAD~5 HEAD                 # shape of recent change
    ```
 
-2. Read `dt-foundry/brief.md` — one line reminder of what this build is for.
+2. Read `dt-foundry/mode.md` — what mode is the project in? This determines what companion skill runs alongside standup.
 
-3. Read the most recent `dt-foundry/` output file to pick up where the last session left off.
+3. Read `dt-foundry/brief.md` — one line reminder of what this build is for. Ask: does the current work still serve the brief? This is the strategy cross-check. It runs in every mode.
 
-4. Ask the following. Wait for each answer:
-   - What shipped or moved since the last session?
-   - What are you working on right now?
-   - What is blocked, and what specifically is the block?
-   - What is the one thing that moves the build forward today?
+4. Read the most recent `dt-foundry/` output file to pick up where the last session left off.
 
-5. Identify the next action. One thing. Named precisely.
+5. Run the companion skill for the current mode:
+   - **Design** → run `/taste` and `/hoser`
+   - **Code** → run `/dev`, `/zombie`, `/llmcodecheck`, `/trim`
+   - **QA** → run `/qa` (session review — open bugs, priority fix, Founder pulls)
+   - **Ship** → run `/preflight`, then `/target`
 
-6. Write standup note to `dt-foundry/standup.md` — append with timestamp (date + time, e.g. `## 2026-04-13 19:04 — Session close`), don't overwrite. Every standup is a new entry. The file accumulates.
+6. Identify the next action. One thing. Named precisely.
 
-7. Print to terminal: what moved, what's blocked, the one next action.
+7. Write standup note to `dt-foundry/standup.md` — append with timestamp (date + time, e.g. `## 2026-04-13 19:04 — Session close`), don't overwrite. Every standup is a new entry. The file accumulates.
+
+8. **Mode transition check:** After writing the standup, evaluate mode completion criteria from `dt-foundry/mode.md`:
+   - **Design complete?** /taste passed + /hoser run + brief intact → "Ready to activate Code mode?"
+   - **Code complete?** /dev passed + /zombie + /llmcodecheck + /trim run → "Ready to activate QA mode?"
+   - **QA complete?** All Critical and Major bugs in qa.md are Verified or Closed → "All Critical and Major bugs are Verified. Ready to activate Ship mode?"
+   - **Ship complete?** /preflight passed + /target gave ship verdict + build submitted → "Both platforms submitted. Ready to close this build cycle?"
+   - If criteria are not met: do not prompt. State what's still open.
+   - If criteria are met: present the transition prompt. Wait for signoff. Nothing moves without it. On signoff, update `dt-foundry/mode.md` with the new mode and activation date.
+
+9. Print to terminal: current mode, what moved, what's blocked, the one next action.
 
 
 ---

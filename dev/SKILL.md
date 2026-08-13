@@ -1,7 +1,7 @@
 ---
 name: /dev
 description: Engineering review lens. Evaluates code quality, architecture, production-readiness, security, and performance. The engineering counterpart to /taste.
-allowed-tools: Read, Bash
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is
@@ -25,6 +25,35 @@ Would a senior engineer approve this in a code review? Are there architectural d
 ## What it won't do
 
 /dev will not rewrite your code. It will tell you exactly what needs to change and why, and leave the execution to you.
+
+---
+
+## Action
+
+1. Run the four gstack passes in sequence:
+
+   ```bash
+   /review          # code review, diff-level, production-readiness, P1 gate
+   /plan-eng-review # architecture review, data flow, edge cases, completeness
+   /cso             # security audit, OWASP Top 10, STRIDE threat model
+   /health          # code quality health check, signal-to-noise, structural integrity
+   ```
+
+   If gstack is not installed, prompt before continuing:
+   ```bash
+   git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup
+   ```
+
+2. Collect the four outputs. Consolidate into a single prioritized report:
+   - **Fix before ship** — blockers. Cannot go out as-is.
+   - **Fix before scale** — not blocking now, will cost twice as much to fix at 10× load.
+   - **Fix when you have time** — real issues, low urgency.
+
+3. Write the consolidated report to `dt-foundry/dev.md` with timestamp.
+
+4. Print to terminal: blockers first, then concerns, then deferred. Each with a one-line fix.
+
+5. Invoke `/logicchain` — run the logic chain as the closing journal entry for this dev session. What was the cycle? What was introduced? Where does it stand? The chain gets written to `dt-foundry/chain.md` automatically.
 
 ---
 

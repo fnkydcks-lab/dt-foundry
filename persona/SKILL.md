@@ -1,7 +1,7 @@
 ---
 name: /persona
 description: Builds the human who will use this. Not a demographic. A person with a history, a mood, and a reason to care or not care about what you're making.
-allowed-tools: Read
+allowed-tools: Read, Write, Bash
 ---
 
 ## Who this is
