@@ -37,6 +37,18 @@ When the user's request matches a lens, invoke it. Do not answer directly.
 
 Every lens writes to `dt-foundry/` in the **current project root** — not the skills directory. Before writing any output, run `mkdir -p dt-foundry` from the project root to ensure the directory exists. Do not delete this directory. It is the provenance record — the timestamped history of every design decision that shaped the build. Proof that a person was in the room.
 
+## Vault sync — mirror to the centralized backup
+
+After any lens writes or appends to its `dt-foundry/` output file, also run:
+
+```bash
+scripts/vault-sync.sh <lens-name> <path-to-a-temp-file-containing-just-the-new-entry>
+```
+
+from `~/Desktop/sprnova/dt-foundry` (this repo), using **only the entry just written this run** — never the whole accumulated file, which would duplicate prior history on every sync. Write the new entry to a temp file first if the lens appends to a growing file (e.g. `standup.md`), then pass that temp file's path.
+
+This is personal, optional infrastructure — it mirrors the project-local write into `~/projects/dt-foundry/reports/<project>/<lens>/<date>.md` for redundant backup, and skips silently (never blocks the lens) if that vault repo isn't present on the current machine.
+
 ## Available lenses
 
 /brief, /taste, /scope, /standup, /persona, /room, /preflight, /dev, /target, /q, /hoser, /logicchain, /sFlutterCheck, /design-review, /backlog, /wild, /drift, /qa, /trim, /zombie, /llmcodecheck
