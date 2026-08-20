@@ -29,7 +29,13 @@ if [ ! -f "$CONTENT_FILE" ]; then
   exit 0
 fi
 
-PROJECT=$(basename "$(git rev-parse --show-toplevel 2>/dev/null)" 2>/dev/null || echo "unknown")
+# "sprnova" is the catch-all bucket for lens output that isn't tied to any
+# specific product: no git repo in the current context, or dogfooding the
+# lens pack on itself (its own repo name is "dt-foundry", not a product).
+PROJECT=$(basename "$(git rev-parse --show-toplevel 2>/dev/null)" 2>/dev/null || echo "")
+if [ -z "$PROJECT" ] || [ "$PROJECT" = "dt-foundry" ]; then
+  PROJECT="sprnova"
+fi
 
 DEST_DIR="$VAULT_ROOT/reports/$PROJECT/$LENS"
 mkdir -p "$DEST_DIR"
